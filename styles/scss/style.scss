@@ -48,3 +48,24 @@ body{
 
     }
 }
+.humbrger-menu{
+    display: none;
+    flex-direction: column;
+    span{
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        margin: 2px;
+        border-radius: 3px;
+        background: $secondaryColor;
+    }
+}
+
+@include media(M){
+    .humbrger-menu{
+        display: flex;
+    }
+    .navbar{
+        display: none;
+    }
+}

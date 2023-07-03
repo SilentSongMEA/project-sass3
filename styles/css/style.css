@@ -48,4 +48,26 @@ body {
   color: rgb(27, 27, 27);
 }
 
+.humbrger-menu {
+  display: none;
+  flex-direction: column;
+}
+.humbrger-menu span {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  margin: 2px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+@media (max-width: 768px) {
+  .humbrger-menu {
+    display: flex;
+  }
+  .navbar {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
