@@ -48,11 +48,11 @@ body {
   color: rgb(27, 27, 27);
 }
 
-.humbrger-menu {
+.hamburger-menu {
   display: none;
   flex-direction: column;
 }
-.humbrger-menu span {
+.hamburger-menu span {
   display: inline-block;
   width: 20px;
   height: 3px;
@@ -62,7 +62,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .humbrger-menu {
+  .hamburger-menu {
     display: flex;
   }
   .navbar {

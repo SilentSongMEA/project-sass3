@@ -48,7 +48,7 @@ body{
 
     }
 }
-.humbrger-menu{
+.hamburger-menu{
     display: none;
     flex-direction: column;
     span{
@@ -62,7 +62,7 @@ body{
 }
 
 @include media(M){
-    .humbrger-menu{
+    .hamburger-menu{
         display: flex;
     }
     .navbar{
