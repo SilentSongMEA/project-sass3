@@ -61,12 +61,91 @@ body {
   background: #fff;
 }
 
+.main {
+  display: flex;
+  margin: 2rem 3rem;
+}
+.main aside {
+  flex-direction: column;
+  width: 25%;
+  margin-right: 25px;
+  background: #fff;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main aside div {
+  background: #654fef;
+  width: 100%;
+  height: 110px;
+  margin: 20px 10px;
+  line-height: 110px;
+  text-align: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+.main main {
+  flex-direction: column;
+  width: 75%;
+  background: #fff;
+  height: 600px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main main img {
+  width: 200px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.main main h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #654fef;
+  margin: 2rem 0 3rem;
+}
+.main main p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(27, 27, 27);
+}
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
   }
   .navbar {
     display: none;
+  }
+  .main {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+  .main main {
+    width: calc(100% - 2rem);
+    margin-bottom: 20px;
+    height: 500px;
+  }
+  .main main p {
+    font-size: 1.3rem;
+  }
+  .main aside {
+    width: calc(100% - 2rem);
+    height: 600px;
   }
 }
 

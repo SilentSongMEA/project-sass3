@@ -61,6 +61,51 @@ body{
     }
 }
 
+.main{
+    display: flex;
+    margin: 2rem 3rem;
+
+    aside{
+        flex-direction: column;
+        width: 25%;
+        margin-right:25px; 
+        @include  bodyStyle;
+        @include boxStyle;
+
+        div{
+             
+            background: $primaryColor;
+            width:100%;
+            height: 110px;
+            margin: 20px  10px;
+            line-height: 110px;
+            text-align: center;
+            @include boxStyle;
+            @include textstyle(1rem,bold,$secondaryColor);
+        }
+    }
+
+    main{
+        flex-direction: column;
+        width: 75%;
+        @include  bodyStyle;
+        @include boxStyle;
+
+        img{
+            width: 200px;
+            @include boxStyle;
+        }
+
+        h2{
+            @include textstyle(4rem,bold,$primaryColor);
+            margin: 2rem 0 3rem;
+        }
+        p{
+            @include textstyle(2rem,bold,$textColor);
+        }
+    }
+}
+
 @include media(M){
     .hamburger-menu{
         display: flex;
@@ -68,4 +113,27 @@ body{
     .navbar{
         display: none;
     }
+    .main{
+        flex-direction: column-reverse; 
+        margin: 1rem;
+
+      main{
+        width: calc(100% - 2rem);
+       margin-bottom: 20px;
+       height: 500px;
+
+        p{
+            
+            
+            font-size: 1.3rem;
+        }
+    
+    } 
+    aside{
+        width: calc(100% - 2rem);
+        height: 600px;
+        
+    }
+}
+
 }
