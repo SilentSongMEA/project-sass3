@@ -124,6 +124,77 @@ body {
   color: rgb(27, 27, 27);
 }
 
+.cards {
+  width: calc(100% - 6rem);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+}
+.card .card-content {
+  line-height: 1.5rem;
+  padding: 15px;
+  background: #fff;
+}
+.card .card-content p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: rgb(27, 27, 27);
+}
+.card .card-content span {
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #654fef;
+}
+
+footer {
+  display: flex;
+  padding: 2rem 3rem;
+  margin-top: 30px;
+  background: #654fef;
+}
+footer .summary {
+  width: 50%;
+}
+footer .summary p {
+  font-size: 1.2rem;
+  font-weight: 100;
+  color: #fff;
+  text-align: justify;
+}
+footer .links {
+  padding: 0 5rem;
+}
+footer .links ul {
+  list-style-type: none;
+}
+footer .links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+footer .links a:hover {
+  color: rgb(27, 27, 27);
+  transition: all 0.15s ease-in;
+}
+
 @media (max-width: 768px) {
   .hamburger-menu {
     display: flex;
@@ -146,6 +217,27 @@ body {
   .main aside {
     width: calc(100% - 2rem);
     height: 600px;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+  footer .summary {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .links {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 }
 

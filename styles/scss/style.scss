@@ -85,6 +85,7 @@ body{
         }
     }
 
+    
     main{
         flex-direction: column;
         width: 75%;
@@ -105,7 +106,73 @@ body{
         }
     }
 }
+.cards{
+    width: calc(100% - 6rem);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap:30px;
+    padding: 20px 0;
 
+}
+.card{
+@include boxStyle;
+
+img{
+    width:100%;
+}
+.card-content{
+    line-height: 1.5rem;
+    padding: 15px;
+    background: $secondaryColor;
+    
+    p{
+        margin: 10px 0;
+        @include textstyle(1.1rem,100,$textColor);
+    }
+    span{
+        display: inline-block;
+        margin:10px 0;
+        @include textstyle(0.9rem,bold,$primaryColor);
+    }
+}
+}
+footer{
+    display: flex;
+    padding: 2rem 3rem;
+    margin-top: 30px;
+    background: $primaryColor;
+
+    .summary{
+    width: 50%;
+
+    p{
+        @include textstyle(1.2rem,100,$secondaryColor);
+        text-align: justify;
+
+    }
+    }
+    .links{
+
+        padding: 0 5rem;
+        
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            @include textstyle(1.2rem,bold,$secondaryColor);
+            margin-bottom: 10px;
+            display: inline-block;
+
+            &:hover{
+                color: $textColor;
+                transition: all .15s ease-in;
+            }
+        }
+    }
+}
 @include media(M){
     .hamburger-menu{
         display: flex;
@@ -123,8 +190,6 @@ body{
        height: 500px;
 
         p{
-            
-            
             font-size: 1.3rem;
         }
     
@@ -135,5 +200,26 @@ body{
         
     }
 }
+.cards{
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
 
+footer{
+    flex-direction: column;
+    .summary{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .links{
+        width: 100%;
+        padding: 0;
+    }
+}
+}
+@include media(L){
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
 }
